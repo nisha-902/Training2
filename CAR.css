@@ -1,0 +1,58 @@
+body{
+    background-color:white;
+
+}
+.CAR{
+    width: 300px; height: 200px;
+    position: absolute;
+    animation: car1 10s linear 2s infinite;
+}
+@keyframes car1{
+    0%{
+        top:0px;
+        left: 0px;
+    }
+    99%{
+        top: 0px;
+        left: 1000px;
+    }
+}
+.wheel1{
+    width: 100px; height: 100px;
+    margin-top: 100px;
+    animation: wheel11 10s linear 2s infinite;
+    position:relative;
+}
+@keyframes wheel11{
+    from{
+        top:0px;
+        left:0px;
+        transform: rotate(0deg);
+        
+    }
+    to{
+        top: 0px;
+        left: 1000px;
+        transform: rotate(360deg);
+    }
+}
+.wheel2{
+    width: 100px; height: 100px;
+    margin-top: 100px;
+    margin-left: 80px;
+    animation: wheel12 10s linear 2s infinite;
+    position: relative;
+}
+@keyframes wheel12{
+    from{
+        top:0px;
+        left: 0px;
+        transform: rotate(0deg);
+        
+    }
+    to{
+        top: 0px;
+        left: 1000px;
+        transform: rotate(360deg);
+    }
+}

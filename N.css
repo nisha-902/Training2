@@ -1,0 +1,43 @@
+body{
+    background-color:antiquewhite
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+div{
+    width:150px;
+    height:150px;
+    background-color: aquamarine;
+}
+.first{
+    top:400px;
+    left:100px;
+    position:relative;
+    animation:nisha 5s linear ;
+
+
+}
+@keyframes nisha{
+    0%
+    {
+        top:400px;
+        left:100px;
+     }
+     40%
+     {  top:100px;
+        left:100px;
+    }
+    75%
+    {
+        top:400px;
+        left:300px;
+    }
+    100%
+    {
+        top:100px;
+        left:300px;
+    }
+
+}

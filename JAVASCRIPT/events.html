@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        function a(){
+            var msg = "Hello THis event Works";
+            // console.log("HEllo! On click event works");
+            console.log(msg);
+            // alert("HEllo! On click event works");
+        }
+        function ab(){
+            console.log("HEllo! On double click event works");
+        }
+        function mousein(){
+            console.log("HEllo! On mouse over event works");
+        }
+        function mouseout(){
+            console.log("HEllo! On mouse out event works");
+        }
+        function keyup(){
+            // console.log("HEllo! On key up event works");
+            alert("HEllo! On key up event works");
+        }
+        function keydown(){
+            // console.log("HEllo! On key up event works");
+            alert("HEllo! On key down event works");
+        }
+        function input(){
+            alert("HEllo!  event works");
+            
+        }
+    </script>
+</head>
+<body>
+    <button onclick="a()">Click Event</button>
+    <button ondblclick="ab()">double Click Event</button>
+    <div onmouseover="mousein()" onmouseout="mouseout()"></div>
+    <input type="text" onkeyup="keyup()" placeholder="Key Up Event">
+    <input type="text" onkeydown="keydown()" placeholder="Key down Event">
+    <input type="text" onfocus="input()" placeholder="enter any text">
+</body>
+</html>

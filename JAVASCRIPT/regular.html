@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        span{
+            color:red;
+        }
+    </style>
+    <script>
+        function hit(){
+            //get value 
+            var email = document.getElementById("e").value;
+            // alert(email);
+            var pat = /^[a-zA-Z0-9\.\-\_]+\@+[a-zA-Z0-9]+\.+[a-zA-Z]{2,3}$/;
+
+            if(pat.test(email)){
+                // alert("pattern Matched");
+                document.getElementById("emailerr").innerHTML = "";
+            }
+            else{
+                // alert("pattern doesn`t Matched");
+                //set value
+                document.getElementById("emailerr").innerHTML = "pattern doesn`t Matched";
+            }
+        }
+        function hit1(){
+            //get value 
+            var ph = document.getElementById("contact").value;
+            // alert(email);
+            var pat = /^[6-9]{1}[0-9]{9}$/;
+
+            if(pat.test(ph)){
+                // alert("pattern Matched");
+                document.getElementById("contacterr").innerHTML = "";
+            }
+            else{
+                // alert("pattern doesn`t Matched");
+                //set value
+                document.getElementById("contacterr").innerHTML = "Invalid Number";
+            }
+        }
+    </script>
+</head>
+<body>
+    Enter Email <input type="text" onblur="hit()" id="e"><span id="emailerr"></span><br>
+    Enter Contact <input type="text" oninput="hit1()" id="contact"><span id="contacterr"></span><br>
+</body>
+</html>

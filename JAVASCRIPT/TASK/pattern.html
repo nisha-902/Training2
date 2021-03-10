@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        span{
+            color:red;
+        }
+    </style>
+    <script>
+        function hit(){
+        var name= document.getElementById("name").value;
+        var pat=/^[A-Z]{1}[a-z\space]{1,20}$/;
+        
+        if(pat.test(name)){
+            document.getElementById("nameerr").innerHTML="";
+        }
+        else{
+        document.getElementById("nameerr").innerHTML="pattern doesn`t matched";
+        }
+    }
+    function hit1(){
+        var email=document.getElementById("e").value;
+        var pat=/^[a-zA-Z0-9\.\-\_]+\@+[a-zA-Z0-9]+\.+[a-zA-Z]{2,3}$/;
+        if(pat.test(email)){
+            document.getElementById("emailerr").innerHTML="";
+         }
+        else{
+            document.getElementById("emailerr").innerHTML="pattern doesn`t matched";
+        }
+     }
+  function hit3(){
+        var pattern=document.getElementById("pattern").value;
+        var pat=/^[A-Z]{2}[a-z]{2}[0-9]{2}$/;
+        if(pat.test(pattern)){
+            document.getElementById("patternerr").innerHTML="";
+        
+        }
+        else{
+            document.getElementById("patternerr").innerHTML="pattern doesn`t matched";
+        }
+    }
+    function hit2(){
+        var landline=document.getElementById("landline").value;
+        var pat=/^[0]{1}[1-8]{2}[\-]{1}[0-9]{8}$/;
+        if(pat.test(landline)){
+            document.getElementById("error").innerHTML="";
+        }
+            else{
+                document.getElementById("error").innerHTML="pattern doesn`t matched";
+            }
+        }
+    </script>
+</head>
+<body>
+Enter Name<input type="text" onblur="hit()" id="name"><span id="nameerr"></span><br><br>
+Enter Email<input type="text"  onblur="hit1()"  id="e"><span id ="emailerr"></span><br><br>
+landline<input type="text" onblur="hit2()" id="landline"><span id="error"></span><br><br>
+Enter pattern <input type="text"  onblur="hit3()"  id="pattern"><span id ="patternerr"></span><br>
+</body>
+</html>

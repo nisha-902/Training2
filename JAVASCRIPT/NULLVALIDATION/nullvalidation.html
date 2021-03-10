@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function hit(){
+            // alert();
+            var name=document.getElementById("name").value;
+            var country=document.getElementById("country").value;
+            // alert(name);
+            // alert(country);
+            if(name=="" || country=="select your country"){
+                alert("complete form");
+              //  document.getElementById("error").innerHTML = "complete form";
+            }
+            else{
+                alert();
+            }
+        }
+    </script>
+</head>
+<body>
+    <span id="error"></span>
+    <form action="welcome.html" onsubmit="hit()">
+        <label>Enter name</label><input type="text" name="name" id="name"><br>
+        <label>country</label>
+        <select id="country">
+            <option selected disabled>select your country</option>
+            <option>india</option>
+            <option>uk</option>
+            <option>australia</option>
+        </select><br>
+        <button type="submit">submit</button>
+
+    </form>
+</body>
+</html>

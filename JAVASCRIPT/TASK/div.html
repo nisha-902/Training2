@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>documents</title>
+    <style>
+        .d1{
+            height: 50px;
+            width: 50px;
+            margin-bottom:10px;
+            background-color:chocolate;
+        }
+        .d2{
+            height: 50px;
+            width: 50px;
+            margin-bottom:10px;
+            background-color:brown;
+        }
+    </style>
+    <script>
+        function a(){
+            var num=document.getElementById('number').value;
+        if(num%2==0)
+        {
+            for(var i=1;i<=num;i++){
+                document.getElementById('display').innerHTML=document.getElementById('display').innerHTML+'<div class="d1">'+"<br>";
+            }
+        
+        }
+        else{
+            for(var i=1;i<=num;i++){
+                document.getElementById('display').innerHTML=document.getElementById('display').innerHTML+'<div class="d2">'+"<br>";
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <input type="text" id="number" >
+    <button onclick="a()">click here</button><br><br>
+    <span id="display"></span>
+   
+
+</body>
+</html>

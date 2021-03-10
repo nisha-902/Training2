@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Movie</title>
+    <style>
+    .pic1{
+        width:150px;
+        height:150px;
+        margin-left:90px;
+    }
+    .h2{
+        padding-left:43%;
+    }
+    .d1{
+        width:50px;
+        height:50px;
+        border-style: solid;
+        margin-left: 400px;
+    }
+    .d2{
+        width:50px;
+        height:50px;
+        margin-left: 20px;
+        border-style: solid;
+
+    }
+   
+    </style>
+    
+    <script>
+        function hit1(){
+            var num=document.getElementById('i1').value;
+            if(num=="A" || num.lenght==0){
+                document.getElementById('pic1').src="ONbulb.jpg";
+            }
+            else{
+                document.getElementById('pic1').src="OFFbulb.jpg";
+            }
+        }
+        function hit2(){
+            var num=document.getElementById('i2').value;
+            if(num=="B" || num.lenght==0){
+                document.getElementById('pic2').src="ONbulb.jpg";
+            }
+            else{
+                document.getElementById('pic2').src="OFFbulb.jpg";
+            }
+        }
+        function hit3(){
+            var num=document.getElementById('i3').value;
+            if(num=="C" || num.lenght==0){
+                document.getElementById('pic3').src="ONbulb.jpg";
+            }
+            else{
+                document.getElementById('pic3').src="OFFbulb.jpg";
+            }
+        }
+        function hit4(){
+            var num=document.getElementById('i4').value;
+            if(num=="D" || num.lenght==0){
+                document.getElementById('pic4').src="ONbulb.jpg";
+            }
+            else{
+                document.getElementById('pic4').src="OFFbulb.jpg";
+            }
+        }
+        function hit5(){
+            var num=document.getElementById('i5').value;
+            if(num=="2" || num.lenght==0){
+                document.getElementById('pic5').src="ONbulb.jpg";
+            }
+            else{
+                document.getElementById('pic5').src="OFFbulb.jpg";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2 class="h2">Guess Movie</h2>
+    <img src="ONbulb.jpg" class="pic1" id="pic1">
+    <img src="ONbulb.jpg"class="pic1" id="pic2">
+    <img src="ONbulb.jpg"class="pic1" id="pic3"> 
+    <img src="ONbulb.jpg"class="pic1" id="pic4">
+
+    <img src="onbulb.jpg"class="pic1" id="pic5"><br><br><br><br>
+    <input type="text" class="d1" id="i1" oninput="hit1()">
+    <input type="text" class="d2" id="i2" oninput="hit2()">
+    <input type="text" class="d2" id="i3"oninput="hit3()">
+    <input type="text" class="d2" id="i4" oninput="hit4()">
+    <input type="text" class="d2" id="i5"oninput="hit5()">
+    
+    <span id="print"></span>
+
+</body>
+</html>

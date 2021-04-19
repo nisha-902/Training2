@@ -1,0 +1,13 @@
+[
+    {
+        "id":1,
+        "name":"nisha",
+        "rollno.:"902"
+
+    },
+    {
+        "id":2,
+        "name":"sandy",
+        "rollno":"911"
+    }
+]

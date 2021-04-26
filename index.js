@@ -17,7 +17,7 @@ app.listen(3000)
 // console.log('writing complete')
 //  const server= http.createServer((req, res)=>{
 //     console.log(req.url)
-// //     const query=url.parse(req.url,true)
+//    const query=url.parse(req.url,true)
 // //    console.log(query)
     
 //     const {query, pathname} =  url.parse(req.url,true)

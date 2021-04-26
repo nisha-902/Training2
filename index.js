@@ -12,16 +12,16 @@ app.listen(3000)
 // const readfile=fs.readFileSync('meanstack.txt', 'utf-8')
 // console.log(readfile)
 
-// // const newtext="hello class, this is new file and created at "+Date.now();
-// // fs.writeFileSync('newfile.txt',newtext)
-// // console.log('writing complete')
+// const newtext="hello class, this is new file and created at "+Date.now();
+// fs.writeFileSync('newfile.txt',newtext)
+// console.log('writing complete')
 //  const server= http.createServer((req, res)=>{
 //     console.log(req.url)
 // //     const query=url.parse(req.url,true)
 // //    console.log(query)
     
 //     const {query, pathname} =  url.parse(req.url,true)
-//      console.log(req.url)
+//      console.log(req.url) 
 //      const path=req.url
 //      if(pathname===('/'))
 //      {

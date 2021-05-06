@@ -59,3 +59,12 @@ exports.getstudent = function(req,res){
         res.status(200).send({success:true,message:"All Students",status:200,data:data})
     })
 }
+
+
+
+exports.getstudentbyid=function(req, res){
+    Student.findOne({_id:req.body.id})
+    .then(data=>{
+        res.status(200).send({success:true,message:"data loaded",status:200,data:data})
+    })
+}

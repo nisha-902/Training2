@@ -19,8 +19,10 @@ router.post('/addBio2', bioController.addBio2);
 router.post('/addStudent',studentController.addStudent);
 router.post('/addStudentmethod2',studentController.addStudentmethod2);
 
-router.get('/getStudent', studentController.getstudent)
-router.post('/getStudentById', studentController.getstudentbyid)
+router.get('/getStudent', studentController.getstudent);
+router.post('/getStudentById', studentController.getstudentbyid);
+router.post('/updateStudent', studentController.updatestudent);
+router.post('/deleteStudent',studentController.deletestudent);
 /**
  * product routes
  */

@@ -68,3 +68,49 @@ exports.getstudentbyid=function(req, res){
         res.status(200).send({success:true,message:"data loaded",status:200,data:data})
     })
 }
+exports.updatestudent=function(req, res){
+ Student.findOne({_id:req.body._id})
+ .then(data=>{
+     if(data!=null){
+        //  res.send(data)
+        data.name= req.body.name;
+        data.email= req.body.email;
+        data.phone= req.body.phone;
+        data.address= req.body.address;
+    
+        data.save();
+        
+        res.status(200).send({
+            success:true,
+            msg:" record updated", 
+        status:200})
+
+     }
+     else{
+        res.status(409).send({success:false,
+            message:"already exist email", 
+            status:409})
+
+     }
+
+ })
+  
+}
+exports.deletestudent = function(req,res){
+    Student.findOne({_id:req.body._id})
+    .then(data=>{
+        if(data!=null){
+            Student.deleteOne({_id:req.body._id})
+            .then(data=>{
+                console.log(data)
+            })
+            .catch(err=>{
+                console.log(err)
+            })
+            res.status(200).send({success:true,message:"student Deleted",status:200})
+        }
+        else{
+            res.status(404).send({success:false,message:"No student Found",status:404})
+        }
+    })
+}

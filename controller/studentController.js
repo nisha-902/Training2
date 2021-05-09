@@ -74,7 +74,6 @@ exports.updatestudent=function(req, res){
      if(data!=null){
         //  res.send(data)
         data.name= req.body.name;
-        data.email= req.body.email;
         data.phone= req.body.phone;
         data.address= req.body.address;
     

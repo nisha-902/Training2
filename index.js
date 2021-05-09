@@ -17,7 +17,7 @@ let mongoose= require('mongoose');
 
 //config bodyparser to handle the post requests
 app.use(bodyParser.urlencoded({
-    extended: false
+    extended: true
 }));
 app.use(bodyParser.json());
 

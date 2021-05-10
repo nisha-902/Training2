@@ -3,6 +3,7 @@ var bioController= require('./Controller/bioController');
 var studentController = require('./controller/studentController');
 var productController= require('./controller/productController');
 var myProductController=require('./Controller/myProductController');
+var authController=require('./controller/authController');
 router.get("/", (req,res)=>{
     res.json({
         status:true,
@@ -24,6 +25,9 @@ router.get('/getStudent', studentController.getstudent);
 router.post('/getStudentById', studentController.getstudentbyid);
 router.post('/updateStudent', studentController.updatestudent);
 router.post('/deleteStudent',studentController.deletestudent);
+router.post('/register', authController.register);
+router.post('/login', authController.login);
+router.get('/logout',authController.logout);
 /**
  * product routes
  */

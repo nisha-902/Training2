@@ -1,15 +1,32 @@
 let router=require("express").Router();
+var multer  = require('multer')
+var path = require('path')
 var bioController= require('./Controller/bioController');
 var studentController = require('./controller/studentController');
 var productController= require('./controller/productController');
 var myProductController=require('./Controller/myProductController');
 var authController=require('./controller/authController');
-router.get("/", (req,res)=>{
-    res.json({
-        status:true,
-        msg:"welcome to our first Rest API"
-    });
-});
+var notesController=require('./controller/notesController');
+// router.get("/", (req,res)=>{
+//     res.json({
+//         status:true,
+//         msg:"welcome to our first Rest API"
+//     });
+// });
+var storage= multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, './public/notes')
+    },
+    filename: function (req, file, cb) {
+      cb(null, file.fieldname + '-' + Date.now()+path.extname(file.originalname))
+    }
+  })
+var upload= multer({ storage: storage})
+/**
+ * notes routes
+ */
+
+ router.post('/addNotes',upload.single('document'),notesController.addnotes)
 /**
  * bio routes
  */

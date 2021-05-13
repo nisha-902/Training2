@@ -7,6 +7,8 @@ var productController= require('./controller/productController');
 var myProductController=require('./Controller/myProductController');
 var authController=require('./controller/authController');
 var notesController=require('./controller/notesController');
+var courseController=require('./controller/courseController');
+var subjectController=require('./controller/subjectController');
 // router.get("/", (req,res)=>{
 //     res.json({
 //         status:true,
@@ -60,5 +62,16 @@ router.get('/getmyProduct', myProductController.getmyproduct);
 router.post('/getmyProductById', myProductController.getmyproductbyid);
 router.post('/updatemyProduct', myProductController.updatemyproduct);
 router.post('/deletemyProduct',myProductController.deletemyproduct);
-
-module.exports=router;
+/**
+ * course routes
+ */
+router.post("/addCourse", courseController.addcourse);
+/**
+ * subject routes
+ */
+ router.post("/addSubject", subjectController.addsubject);
+ router.get("/getSubject",subjectController.getsubject);
+ router.get("/getSubject",subjectController.getsubject);
+ router.post("/getSubjectByPost",subjectController.getsubjectbypost);
+ router.get("/getSubjectByGet/:id",subjectController.getsubjectbyget);
+module.exports=router;         
